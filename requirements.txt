@@ -3,3 +3,11 @@ ipython~=7.2.0
 pillow~=5.4.1
 git+https://github.com/IQSS/dataverse-client-python.git#egg=dataverse~=0.1.2
 jupyter~=1.0.0
+geoplotlib
+pyglet~=1.2.4
+numpy~=1.16.0
+pandas~=0.24.0
+geocoder~=1.38.1
+geopy~=1.18.1
+matplotlib~=3.0.2
+plotly~=3.5.0
