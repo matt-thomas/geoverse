@@ -11,5 +11,7 @@
 {% block content %}
   <h1>Statehouse Demo</h1>
   <p>These visuals use replication data from <a href='https://dataverse.unc.edu/dataset.xhtml?persistentId=doi:10.15139/S3/3EAPI2'>America's Crowded Statehouses: Measuring the Explaining Lobbying in the American States</a></p>
-  <p>Click <a href="{{ filename }}">here</a> to view the visuals.</p>
+  {% load static %}
+  {% static "" as baseUrl %}
+  <p>Click <a href="{{ baseUrl }}statehouses/{{ filename }}" target="_blank">here</a> to view the visuals.</p>
 {% endblock %}
