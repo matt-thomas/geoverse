@@ -1,0 +1,253 @@
+{% extends "base_generic.html" %}
+
+{% block title %}<title>Geoverse - Browse Datasets</title>{% endblock %}
+
+{% block navbar %}
+<ul class="nav navbar-nav">
+  <li class='active'><a href="{% url 'dataset_index' %}">Browse Resources</a></li>
+  <li><a href="{% url 'statehouses_index' %}">Demo</a></li>
+  <li><a href="/contact">Support</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+  <!-- Main component for a primary marketing message or call to action -->
+  <h1>Browse datasets</h1>
+
+  <!-- Sidebar -->
+  <div id="search-row-panel" class="row row-offcanvas row-offcanvas-left">
+        <div id="dv-sidebar" class="col-sm-4 col-md-3 sidebar-offcanvas">
+<form id="facetType" name="facetType" method="post" action="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=1" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="facetType" value="facetType">
+
+
+                <div class="clearfix"><a href="/dataverse/unc?q=&amp;types=datasets%3Adataverses&amp;sort=dateSort&amp;order=desc&amp;page=1" class="facetTypeChBox facetLink "><div id="facetType:j_idt441" class="ui-selectbooleancheckbox ui-chkbox ui-widget"><div class="ui-helper-hidden-accessible"><input id="facetType:j_idt441_input" name="facetType:j_idt441_input" type="checkbox" autocomplete="off" aria-hidden="true" aria-checked="false"></div><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div></a><a href="/dataverse/unc?q=&amp;types=dataverses&amp;sort=dateSort&amp;order=desc&amp;page=1" class="facetTypeLink chkbox-label-margin ">
+
+                        <i class="icon-dataverse text-icon-inline"></i><span class="facetTypeDataverse">Dataverses (119)</span></a>
+                </div>
+
+                <div class="clearfix"><span class="facetTypeChBox facetLink facetSelected"><div id="facetType:j_idt458" class="ui-selectbooleancheckbox ui-chkbox ui-widget"><div class="ui-helper-hidden-accessible"><input id="facetType:j_idt458_input" name="facetType:j_idt458_input" type="checkbox" autocomplete="off" aria-hidden="true" checked="checked" aria-checked="true" disabled="disabled"></div><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default ui-state-active ui-state-disabled"><span class="ui-chkbox-icon ui-icon ui-icon-check ui-c"></span></div></div></span><a href="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=1" class="facetTypeLink chkbox-label-margin facetSelected">
+
+                        <i class="icon-dataset text-icon-inline"></i><span class="facetTypeDataset">Datasets (24,875)</span></a>
+                </div>
+
+                <div class="clearfix"><a href="/dataverse/unc?q=&amp;types=datasets%3Afiles&amp;sort=dateSort&amp;order=desc&amp;page=1" class="facetTypeChBox facetLink "><div id="facetType:j_idt475" class="ui-selectbooleancheckbox ui-chkbox ui-widget"><div class="ui-helper-hidden-accessible"><input id="facetType:j_idt475_input" name="facetType:j_idt475_input" type="checkbox" autocomplete="off" aria-hidden="true" aria-checked="false"></div><div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default"><span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span></div></div></a><a href="/dataverse/unc?q=&amp;types=files&amp;sort=dateSort&amp;order=desc&amp;page=1" class="facetTypeLink chkbox-label-margin ">
+
+                        <i class="icon-file text-icon-inline"></i><span class="facetTypeFile">Files (226,612)</span></a>
+                </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-5686496940775736468:1580773401327445196" autocomplete="off">
+</form>
+<form id="facetCategoryForm" name="facetCategoryForm" method="post" action="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=1" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="facetCategoryForm" value="facetCategoryForm">
+<div id="facetCategoryForm:facetCategoryList" class="ui-datalist ui-widget"><div id="facetCategoryForm:facetCategoryList_content" class="ui-datalist-content ui-widget-content"><ul id="facetCategoryForm:facetCategoryList_list" class="ui-datalist-data"><li class="ui-datalist-item"><span class="facetCategoryName">Metadata Source</span><div id="facetCategoryForm:facetCategoryList:0:j_idt487" class="ui-datalist ui-widget"><div id="facetCategoryForm:facetCategoryList:0:j_idt487_content" class="ui-datalist-content ui-widget-content"><ul id="facetCategoryForm:facetCategoryList:0:j_idt487_list" class="ui-datalist-data"><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=metadataSource%3A%22Harvested%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Harvested (20,818)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=metadataSource%3A%22UNC+Dataverse%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">UNC Dataverse (4,057)</a></li></ul></div></div></li><li class="ui-datalist-item"><span class="facetCategoryName">Publication Year</span><div id="facetCategoryForm:facetCategoryList:1:j_idt487" class="ui-datalist ui-widget"><div id="facetCategoryForm:facetCategoryList:1:j_idt487_content" class="ui-datalist-content ui-widget-content"><ul id="facetCategoryForm:facetCategoryList:1:j_idt487_list" class="ui-datalist-data"><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=publicationDate%3A%222007%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">2007 (2,123)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=publicationDate%3A%222008%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">2008 (559)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=publicationDate%3A%222009%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">2009 (309)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=publicationDate%3A%222017%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">2017 (174)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=publicationDate%3A%222013%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">2013 (156)</a></li></ul></div></div><table id="facetCategoryForm:facetCategoryList:1:j_idt505" class="ui-panelgrid ui-widget facetsMoreLess" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"></td><td role="gridcell" class="ui-panelgrid-cell"><a id="facetCategoryForm:facetCategoryList:1:j_idt510" href="#" class="ui-commandlink ui-widget" onclick="PrimeFaces.ab({s:&quot;facetCategoryForm:facetCategoryList:1:j_idt510&quot;,u:&quot;facetCategoryForm:facetCategoryList&quot;});return false;">More...</a></td></tr></tbody></table></li><li class="ui-datalist-item"><span class="facetCategoryName">Author Name</span><div id="facetCategoryForm:facetCategoryList:2:j_idt487" class="ui-datalist ui-widget"><div id="facetCategoryForm:facetCategoryList:2:j_idt487_content" class="ui-datalist-content ui-widget-content"><ul id="facetCategoryForm:facetCategoryList:2:j_idt487_list" class="ui-datalist-data"><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=authorName_ss%3A%22Digital+Archive+of+Massachusetts+Anti-Slavery+and+Anti-Segregation+Petitions%2C+Massachusetts+Archives%2C+Boston+MA%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Digital Archive of Massachusetts Anti-Slavery and Anti-Segregation Petitions, Massachusetts Archives, Boston MA (4,396)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=authorName_ss%3A%22Louis+Harris+and+Associates%2C+Inc.%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Louis Harris and Associates, Inc. (985)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=authorName_ss%3A%22Field+Research+Corporation.%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Field Research Corporation. (278)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=authorName_ss%3A%22Br%C5%AFha%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Brůha (250)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=authorName_ss%3A%22Mou%C4%8Dek%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Mouček (250)</a></li></ul></div></div><table id="facetCategoryForm:facetCategoryList:2:j_idt505" class="ui-panelgrid ui-widget facetsMoreLess" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"></td><td role="gridcell" class="ui-panelgrid-cell"><a id="facetCategoryForm:facetCategoryList:2:j_idt510" href="#" class="ui-commandlink ui-widget" onclick="PrimeFaces.ab({s:&quot;facetCategoryForm:facetCategoryList:2:j_idt510&quot;,u:&quot;facetCategoryForm:facetCategoryList&quot;});return false;">More...</a></td></tr></tbody></table></li><li class="ui-datalist-item"><span class="facetCategoryName">Subject</span><div id="facetCategoryForm:facetCategoryList:3:j_idt487" class="ui-datalist ui-widget"><div id="facetCategoryForm:facetCategoryList:3:j_idt487_content" class="ui-datalist-content ui-widget-content"><ul id="facetCategoryForm:facetCategoryList:3:j_idt487_list" class="ui-datalist-data"><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=subject_ss%3A%22Social+Sciences%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Social Sciences (8,269)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=subject_ss%3A%22Medicine%2C+Health+and+Life+Sciences%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Medicine, Health and Life Sciences (1,183)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=subject_ss%3A%22Other%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Other (556)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=subject_ss%3A%22Arts+and+Humanities%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Arts and Humanities (466)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=subject_ss%3A%22Earth+and+Environmental+Sciences%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">Earth and Environmental Sciences (435)</a></li></ul></div></div><table id="facetCategoryForm:facetCategoryList:3:j_idt505" class="ui-panelgrid ui-widget facetsMoreLess" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"></td><td role="gridcell" class="ui-panelgrid-cell"><a id="facetCategoryForm:facetCategoryList:3:j_idt510" href="#" class="ui-commandlink ui-widget" onclick="PrimeFaces.ab({s:&quot;facetCategoryForm:facetCategoryList:3:j_idt510&quot;,u:&quot;facetCategoryForm:facetCategoryList&quot;});return false;">More...</a></td></tr></tbody></table></li><li class="ui-datalist-item"><span class="facetCategoryName">Production Date</span><div id="facetCategoryForm:facetCategoryList:4:j_idt487" class="ui-datalist ui-widget"><div id="facetCategoryForm:facetCategoryList:4:j_idt487_content" class="ui-datalist-content ui-widget-content"><ul id="facetCategoryForm:facetCategoryList:4:j_idt487_list" class="ui-datalist-data"><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=productionDate_s%3A%222014%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">2014 (495)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=productionDate_s%3A%222013%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">2013 (494)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=productionDate_s%3A%221988%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">1988 (420)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=productionDate_s%3A%222012%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">2012 (386)</a></li><li class="ui-datalist-item"><a href="/dataverse/unc?q=&amp;fq0=productionDate_s%3A%222010%22&amp;types=datasets&amp;sort=dateSort&amp;order=desc" class="facetLink">2010 (348)</a></li></ul></div></div><table id="facetCategoryForm:facetCategoryList:4:j_idt505" class="ui-panelgrid ui-widget facetsMoreLess" role="grid"><tbody><tr class="ui-widget-content" role="row"><td role="gridcell" class="ui-panelgrid-cell"></td><td role="gridcell" class="ui-panelgrid-cell"><a id="facetCategoryForm:facetCategoryList:4:j_idt510" href="#" class="ui-commandlink ui-widget" onclick="PrimeFaces.ab({s:&quot;facetCategoryForm:facetCategoryList:4:j_idt510&quot;,u:&quot;facetCategoryForm:facetCategoryList&quot;});return false;">More...</a></td></tr></tbody></table></li></ul></div></div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-5686496940775736468:1580773401327445196" autocomplete="off">
+</form>
+        </div>
+        <div id="dv-main" class="col-sm-8 col-md-9">
+
+
+
+            <p class="visible-xs-block">
+              <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i> Filter Results</button>
+            </p><div id="resultsCountPaginatorBlock" class="row">
+
+                <div class="results-count col-xs-6">1 to 10 of 24,875 Results
+                </div>
+
+                <div class="results-sort-pagination col-xs-6">
+
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-sort"></span> Sort <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right text-left" role="menu">
+                            <li><a href="/dataverse/unc?q=&amp;types=datasets&amp;page=1&amp;sort=nameSort&amp;order=asc"><span class="">Name (A-Z)</span></a>
+                            </li>
+                            <li><a href="/dataverse/unc?q=&amp;types=datasets&amp;page=1&amp;sort=nameSort&amp;order=desc"><span class="">Name (Z-A)</span></a>
+                            </li>
+                            <li><a href="/dataverse/unc?q=&amp;types=datasets&amp;page=1&amp;sort=dateSort&amp;order=desc"><span class="highlightBold">Newest</span></a>
+                            </li>
+                            <li><a href="/dataverse/unc?q=&amp;types=datasets&amp;page=1&amp;sort=dateSort&amp;order=asc"><span class="">Oldest</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div></div><table id="resultsTable" class="">
+<tbody>
+<tr>
+<td><div class="datasetResult clearfix">
+                        <div class="card-title-icon-block">
+                            <span class="icon-dataset text-info pull-right" title="Dataset"></span>
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/NM7IIJ"><span style="padding:4px 0;">Effects of the USAID Geographic Prioritization on Health System Performance in Uganda and Kenya</span></a>
+                        </div>
+                        <div class="card-preview-icon-block text-center">
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/NM7IIJ"><span class="icon-dataset"></span>
+                            </a>
+                        </div><span class="text-muted">Feb 1, 2019</span><span class="text-muted"> - </span><a href="/dataverse/MEP3">MEASURE Evaluation Dataverse</a>
+
+                        <div class="resultDatasetCitationBlock alert alert-info bg-citation">MEASURE Evaluation, 2019, "Effects of the USAID Geographic Prioritization on Health System Performance in Uganda and Kenya", <a href="https://doi.org/10.15139/S3/NM7IIJ" target="_blank">https://doi.org/10.15139/S3/NM7IIJ</a>, UNC Dataverse, V1, UNF:6:V/y0ZCQUwGp705LlrClR7g== [fileUNF]
+                        </div>This study was designed to examine the impact of the realignment of PEPFAR funds to focus on high-need geographic areas and populations (the PEPFAR pivot) on client care and health system performance and describe how PEPFAR investments have and continue to contribute to observed...</div></td>
+</tr>
+<tr>
+<td><div class="datasetResult clearfix">
+                        <div class="card-title-icon-block">
+                            <span class="icon-dataset text-info pull-right" title="Dataset"></span>
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/D2GBVQ"><span style="padding:4px 0;">Campaign Contributions in Prosecutorial Elections, 2014-2017</span></a>
+                        </div>
+                        <div class="card-preview-icon-block text-center">
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/D2GBVQ"><img src="data:image/png;base64,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" alt="">
+                            </a>
+                        </div><span class="text-muted">Jan 31, 2019</span><span class="text-muted"> - </span><a href="/dataverse/ppp">Prosecutors and Politics Project Dataverse</a>
+
+                        <div class="resultDatasetCitationBlock alert alert-info bg-citation">Hessick, Carissa Byrne, 2018, "Campaign Contributions in Prosecutorial Elections, 2014-2017", <a href="https://doi.org/10.15139/S3/D2GBVQ" target="_blank">https://doi.org/10.15139/S3/D2GBVQ</a>, UNC Dataverse, V5, UNF:6:MBU0rNMBM0FX0BlQWREl+w== [fileUNF]
+                        </div>This dataset record contains the Database of Campaign Contributions in Prosecutorial Elections, which is intended as a resource for the study of campaign finance in the election of state and local prosecutors. The database identifies the candidates who ran for local or state-wide...</div></td>
+</tr>
+<tr>
+<td><div class="datasetResult clearfix">
+                        <div class="card-title-icon-block">
+                            <span class="icon-dataset text-info pull-right" title="Dataset"></span>
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/BX0RZE"><span style="padding:4px 0;">Psychosocial and spatial analysis of LGBT tobacco use: Implementation of a probability-based targeted survey sampling design</span></a>
+                        </div>
+                        <div class="card-preview-icon-block text-center">
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/BX0RZE"><span class="icon-dataset"></span>
+                            </a>
+                        </div><span class="text-muted">Jan 29, 2019</span><span class="text-muted"> - </span><a href="/dataverse/ECU">East Carolina University Dataverse</a>
+
+                        <div class="resultDatasetCitationBlock alert alert-info bg-citation">Lee, Joseph;Boynton, Marcella, 2019, "Psychosocial and spatial analysis of LGBT tobacco use: Implementation of a probability-based targeted survey sampling design", <a href="https://doi.org/10.15139/S3/BX0RZE" target="_blank">https://doi.org/10.15139/S3/BX0RZE</a>, UNC Dataverse, V1
+                        </div>This pilot project from the Pilot and Developmental Funding Core of the UNC Center for Regulatory Research on Tobacco Communication implements a novel, probability-based oversample of LGBT adults, their partners, and identifies within-LGBT predictors of tobacco use as part of the...</div></td>
+</tr>
+<tr>
+<td><div class="datasetResult clearfix">
+                        <div class="card-title-icon-block">
+                            <span class="icon-dataset text-info pull-right" title="Dataset"></span>
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/PZ9DXG"><span style="padding:4px 0;">Replication Data for: Suspect Citizens, Cleaned File</span></a>
+                        </div>
+                        <div class="card-preview-icon-block text-center">
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/PZ9DXG"><span class="icon-dataset"></span>
+                            </a>
+                        </div><span class="text-muted">Jan 28, 2019</span><span class="text-muted"> - </span><a href="/dataverse/kshoub">Kelsey Shoub's Dataverse</a>
+
+                        <div class="resultDatasetCitationBlock alert alert-info bg-citation">Shoub, Kelsey, 2019, "Replication Data for: Suspect Citizens, Cleaned File", <a href="https://doi.org/10.15139/S3/PZ9DXG" target="_blank">https://doi.org/10.15139/S3/PZ9DXG</a>, UNC Dataverse, V1, UNF:6:GPy8nfMPeAF5hzHCxaym/A== [fileUNF]
+                        </div>This is data and replication files for Suspect Citizens: What 20 Million Traffic Stops Tell Us About Policing and Race. More specifically, these data sets are the individual traffic stops used in the associated book. All were conducted between 2000 and 2016. Each is zipped DTA (S...</div></td>
+</tr>
+<tr>
+<td><div class="datasetResult clearfix">
+                        <div class="card-title-icon-block">
+                            <span class="icon-dataset text-info pull-right" title="Dataset"></span>
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/1VJGUY"><span style="padding:4px 0;">U.S. EPA NEI version 2 Modeling Platform v7.2</span></a>
+                        </div>
+                        <div class="card-preview-icon-block text-center">
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/1VJGUY"><span class="icon-dataset"></span>
+                            </a>
+                        </div><span class="text-muted">Jan 28, 2019</span><span class="text-muted"> - </span><a href="/dataverse/cmascenter">CMAS Data Warehouse</a>
+
+                        <div class="resultDatasetCitationBlock alert alert-info bg-citation">Baek, Bok. H., 2019, "U.S. EPA NEI version 2 Modeling Platform v7.2", <a href="https://doi.org/10.15139/S3/1VJGUY" target="_blank">https://doi.org/10.15139/S3/1VJGUY</a>, UNC Dataverse, V1
+                        </div>U.S. EPA National Emissions Inventory. 2014 Modeling Platform version 7.2 These packages contain the CMAQ-ready, gridded, speciated hourly emissions files for 2014 including 15 days of spinup days. The case name for these SMOKE output files is "2014fa_nata_cb6cmaq_14j", which ser...</div></td>
+</tr>
+<tr>
+<td><div class="datasetResult clearfix">
+                        <div class="card-title-icon-block">
+                            <span class="icon-dataset text-info pull-right" title="Dataset"></span>
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/QFEMOI"><span style="padding:4px 0;">Explaining the rise in pedestrian fatalities: A safe systems approach</span></a>
+                        </div>
+                        <div class="card-preview-icon-block text-center">
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/QFEMOI"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAwCAMAAAChW0MZAAAAnFBMVEX////s7Ozi4uLl5eXm5ubh4eHk5OTj4+Pq6ur09PTw8PDp6ent7e3o6Ojr6+vn5+fv7+/19fX39/f29vbz8/P+/v7f39/e3t7g4OD6+vrNzc3X19fOzs7x8fHQ0NDy8vLV1dXT09Pa2tr9/f3U1NTPz8/Z2dnR0dHW1tb8/PzJycnb29vd3d3Y2Njc3Nz7+/vMzMz5+fnu7u74+PgLF9MWAAABPElEQVQ4y+3QzXKDIBQF4ICKIioKRCX+xzRqE0ON7/9ujbUNi7arbrrw2zDDnLn3wG73jwFomBYyEILIRg7+JeU6xPOJ4ztOYFIvjBjHEY44ZkzwvZ6FLIKgHZuExokRQ2SkME3tFNEYSZ06HAIcPYRZntOicF0Rl2a1nJjpjXVz5O0Dz055mcEUCvPldO76xm8HnQJVIRagy8vXBhpuAS/XdIQ3WPFnCkeDWgw4e+sS4FAp+bBS6pmqLCynhejL3oKp7TM8fdLt8Z2tV8WprvNDZ7g/pdxi3ahw1hzr8ZLS6YeNEb0vL2z37JqVXQ/DdnABBQHwA9E+U9z31i+e0PFyOydWIElyC4BHQKT//pmXjM2MzwwrexwtAggkepb6asonuZpg11EhqrDQ7Vv1jZxn9VFfz9psNps/ewfxuSn7Hem9BQAAAABJRU5ErkJggg==" alt="">
+                            </a>
+                        </div><span class="text-muted">Jan 28, 2019</span><span class="text-muted"> - </span><a href="/dataverse/CSCRSDataverse">Collaborative Sciences Center for Road Safety Data Repository</a>
+
+                        <div class="resultDatasetCitationBlock alert alert-info bg-citation">Sandt, Laura;Naumann, Becky;Heiny, Stephen;Harmon, Katie;Thomas, Libby;Hassmiller Lich, Kristen;Kuhlberg, Jill;Khattak, Asad;Zhang, Meng;Mussah, Abdul Rashid, 2019, "Explaining the rise in pedestrian fatalities: A safe systems approach", <a href="https://doi.org/10.15139/S3/QFEMOI" target="_blank">https://doi.org/10.15139/S3/QFEMOI</a>, UNC Dataverse, V1, UNF:6:qBk1DeEpvwkxqZSydEniWw== [fileUNF]
+                        </div>Pedestrian fatalities increased to 5,987 in 2016, compared to 5,495 (2015) and 4,910 (2014), or an increase of 22% in the past 2 years. This is particularly alarming after so many years of decreasing pedestrian fatalities nationwide since the early 1970s. The project first conven...</div></td>
+</tr>
+<tr>
+<td><div class="datasetResult clearfix">
+                        <div class="card-title-icon-block">
+                            <span class="icon-dataset text-info pull-right" title="Dataset"></span>
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/U50LT8"><span style="padding:4px 0;">The Uganda Sustainable, Comprehensive Responses for Vulnerable Children and Their Families (SCORE) – data for program performance evaluation supplement on HIV analysis</span></a>
+                        </div>
+                        <div class="card-preview-icon-block text-center">
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/U50LT8"><img src="data:image/png;base64,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" alt="">
+                            </a>
+                        </div><span class="text-muted">Jan 24, 2019</span><span class="text-muted"> - </span><a href="/dataverse/MEP3">MEASURE Evaluation Dataverse</a>
+
+                        <div class="resultDatasetCitationBlock alert alert-info bg-citation">MEASURE Evaluation, 2019, "The Uganda Sustainable, Comprehensive Responses for Vulnerable Children and Their Families (SCORE) – data for program performance evaluation supplement on HIV analysis", <a href="https://doi.org/10.15139/S3/U50LT8" target="_blank">https://doi.org/10.15139/S3/U50LT8</a>, UNC Dataverse, V1
+                        </div>In 2015, MEASURE Evaluation—funded by USAID and the United States President’s Emergency Plan for AIDS Relief (PEPFAR)—received support from USAID/Uganda to complete a performance evaluation of the SCORE program. In January 2017, USAID/Uganda asked MEASURE Evaluation to conduct ad...</div></td>
+</tr>
+<tr>
+<td><div class="datasetResult clearfix">
+                        <div class="card-title-icon-block">
+                            <span class="icon-dataset text-info pull-right" title="Dataset"></span>
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/KHLZ5P"><span style="padding:4px 0;">Monmouth University New Jersey Poll, Number 160</span></a>
+                        </div>
+                        <div class="card-preview-icon-block text-center">
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/KHLZ5P"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAwCAMAAAChW0MZAAAA21BMVEX////19fXv7+/t7e3u7u7y8vLs7Ozr6+v39/fb29u8vLywsLC7u7vKysrNzc2ysrK4uLiqqqq0tLTBwcHi4uLJycna2trFxcXGxsbIyMjQ0NDHx8fj4+P+/v7w8PDz8/P29vb9/f3g4ODf39/Pz8/U1NTAwMDV1dXT09Pq6ur4+Pjo6Oj6+vr8/Pz7+/vx8fH09PTp6enh4eHZ2dnS0tLc3NzW1tbR0dHX19fe3t7n5+fl5eXd3d3m5ubk5OT5+fnY2NjDw8POzs7CwsK+vr69vb3ExMTLy8vMzMyhVcwRAAAC9UlEQVQ4y+WUWZObOBSFQeyZtjOTqKGNZcBgmn01xgIZYTsz4/z/XxR1Ml7S3c5rHuYUFFB8dY6keyWO+63igSACiZeBIgD1LqV9+OPhYTL9+Odfnz7D+2bwUTeeZjPTmKP70MICimXJtiU5/H1q6Xrmyn8OnsNIXvxqArGbQOSm7/3K0qvyF12/biinkKxSBKJkAUEGomUp7F0Ctl1Y5TW5cuu11+ihtmm3242uY1PDnbvpidfurm5SXg7JkFRUKSx7wcUyz2Vi8XpcRc5DCgnthDge2Qwqm8uA9Zr64dUnNJEkfsGNisNllvSO10vigGS7dFiiwhLBG0oeJTqQmsL+u5fT81xavUkUR5sOlKC6EkVpwalJyeXRG0oYbTZ2j6KXcbHlG0ouTcBrirQoDPf79VpHLnHr2t2geq0R2kN6U05ZFFzP7Vw5QlBxd1CGO3dHS5u3yxsvoFqwYjaxWpaqE6fLPB5/KuF3WaU19ARSSSqkglXuR8yC6ZZKY5V3eJ7dZck7/7XD+KLsdu0LiS8KK8+zbFn2iCgyIf2bHnNxQEQgFIMftM3zqsWNaYYuhMMw1Neiu6HmwQ3qNozCgda5GGveTq81j1LnQvEAAJt1oC1HAEjZcsmus66boqeIsh4VwVni5SmCM5ebhw8PR93btPsA6/ugZVXY79uAxbckOk8z0+ZPhjFpJl++HObG38//HP41pnPD+Dw7GD65UJvT1g8xDkMz2DbHx2MwPbqEQoggQtWFIpPG981224Qssg1XzT4IAq3FGLOlu1DdyQz8ZhvUdBgIZSKIQkoGiKroQuXdYfJ0bI7GrGm2x9nktDJPp6fp1J9/rSE9V30h8hLbG0NFhiSqetKTJOkrhZCIwGS8VJxfKs06NHU/wKa3bzyRqSgUoRAUcNsWo6raRVnYpVxY6pK7I3VR4Cbwce0ftSEShvcPpngh6Tt2WiCy9h8PIRTepZyl2ulY7zBG69U2uHPGsS7OxzTN0jHLR9aN3P9P3wAxlHovEPtjGgAAAABJRU5ErkJggg==" alt="">
+                            </a>
+                        </div><span class="text-muted">Jan 22, 2019</span><span class="text-muted"> - </span><a href="/dataverse/mupolling">Monmouth Polling Institute Dataverse</a>
+
+                        <div class="resultDatasetCitationBlock alert alert-info bg-citation">Monmouth University Polling Institute, 2019, "Monmouth University New Jersey Poll, Number 160", <a href="https://doi.org/10.15139/S3/KHLZ5P" target="_blank">https://doi.org/10.15139/S3/KHLZ5P</a>, UNC Dataverse, V1, UNF:6:jWEVBQkV2SJm43dMyy+40A== [fileUNF]
+                        </div>This survey was conducted among New Jersey voters in New Jersey’s 11th Congressional District November general election.</div></td>
+</tr>
+<tr>
+<td><div class="datasetResult clearfix">
+                        <div class="card-title-icon-block">
+                            <span class="icon-dataset text-info pull-right" title="Dataset"></span>
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/JVQ3XY"><span style="padding:4px 0;">Monmouth University Virginia Poll, Number 159</span></a>
+                        </div>
+                        <div class="card-preview-icon-block text-center">
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/JVQ3XY"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAwCAMAAAChW0MZAAAA3lBMVEX////19fXv7+/t7e3u7u7y8vLs7Ozr6+v39/fb29u8vLywsLC7u7vKysrNzc2ysrK4uLiqqqq0tLTBwcHi4uLJycna2trExMTGxsbIyMjR0dHFxcXHx8fj4+P+/v7o6Ojp6enw8PD09PT8/PzW1tbPz8/f39/MzMy6urrOzs7n5+f9/f34+Pjg4ODl5eX6+vr7+/v29vbx8fHz8/Ph4eHZ2dnS0tLT09Pc3NzX19fQ0NDe3t7d3d3m5ubk5OT5+fnq6urY2NjV1dXU1NTAwMDDw8PCwsK+vr69vb3Ly8sS4hSZAAADA0lEQVQ4y+WUa5OiRhSGuV82o8lmGXYUuSMbQBps2oYGAYF1E///H9p2a8axRs3XfMgpwUPVU2+fc/rtZpj/NFiOFziRlTiZ55SHlPrpt6en2fz3Pz7/+UV7LKY9619fFoulsTIfQxZvO6wo8ryreNZDyg/W81D9NvsrkuPk3xrYpLYJ0uyuRvYe+Tnev66oLRRdT+AE0eV4iRNcV6a5yBUFdK/qc1K0C7FeqhXBuNJ1UqukSasYhMH+XU3MvdYGDui6FsgJs5FYxhfgx7pgzmpdGKeoCpvYZzZOwfic+5H6pdXGducUxdZiennL+K54R4tSdmtKnqdYzEamK3I3lNSLXdshPUVIizNmG7NM5tysKPQFpUCKTIRoXYrtMfnhhuL7QgNdCDSb1kXH13pMZnMfKRCYZTkMu51uplQRpZWZ7nTQxVp3tekSz++bprKl1HTiJpXkfYhCwSvYwrvS4hQX2Wljb2iLLJsl/qbPshvruJ7bxkDrRFGEkLWsX4BlvSZvkW0Udsuy9PE8dvtqh/4c/vXsochC6Oa57ydebAJZAiC+8VhKRkCNA9tpDPD3NSG4XpYhStu4Td/HhrCaIlUL9TIIBrVRq6DaIb0hFdqrxYXyJLfgZAlKB14QrST3k4T+rOT8d4GSGJgd9ajAneP8fk1pLnBvXF4fPz1FelgFw0j0YQzoLgxDMI4BCcDhrU1fXb0YxgzPfvw4roy/v/9z/GrMV4bxZXE0JnChqtNyKgkpy3pc4ug5GudRCjpNMzXTdC4UmOFpqoMlLumSQbnGwziOakAIoaO7UM2pHie8HFHXtvSIdB3tRutAq5nO4ULlzXH2EuHIWGC8jBaz07o+nV7m82n1DWnd21GzBFakZ6N1QGsfnBjEwLZjRwbgQH3ZX3acTWS8K2t9GkkdDjgUaEAo85CXuWtb9IpSQA8WngRd5eF1o1iQ4HEiaIrU9sC30t3ra2OJ+p7eFibYTc/HUuPvUttEaXRCbUDM3Xo53pdiLMbKqdf9rPfznrqR+f/FT2LEf80igCB/AAAAAElFTkSuQmCC" alt="">
+                            </a>
+                        </div><span class="text-muted">Jan 22, 2019</span><span class="text-muted"> - </span><a href="/dataverse/mupolling">Monmouth Polling Institute Dataverse</a>
+
+                        <div class="resultDatasetCitationBlock alert alert-info bg-citation">Monmouth University Polling Institute, 2019, "Monmouth University Virginia Poll, Number 159", <a href="https://doi.org/10.15139/S3/JVQ3XY" target="_blank">https://doi.org/10.15139/S3/JVQ3XY</a>, UNC Dataverse, V1, UNF:6:MiZ3XotZbXcHvT1InJPagQ== [fileUNF]
+                        </div>This survey was conducted among Virginia voters in Virginia’s 10th Congressional District November general election.</div></td>
+</tr>
+<tr>
+<td><div class="datasetResult clearfix">
+                        <div class="card-title-icon-block">
+                            <span class="icon-dataset text-info pull-right" title="Dataset"></span>
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/RXQAIY"><span style="padding:4px 0;">Monmouth University West Virginia Poll, Number 158</span></a>
+                        </div>
+                        <div class="card-preview-icon-block text-center">
+                            <a href="/dataset.xhtml?persistentId=doi:10.15139/S3/RXQAIY"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAwCAMAAAChW0MZAAAA3lBMVEX////19fXv7+/t7e3u7u7y8vLs7Ozr6+v39/fb29u8vLyxsbG7u7vKysrNzc2zs7O4uLirq6u0tLTCwsLj4+P+/v709PTe3t6/v7/R0dG+vr7AwMDFxcXDw8PJycm9vb38/Pz7+/v5+fnOzs7Ly8vT09O6urrBwcHHx8fExMTc3Nz9/f34+PjV1dXm5ubx8fHw8PDd3d3f39/k5OTl5eXi4uLq6ur6+vr29vbz8/Pp6eng4ODh4eHZ2dnS0tLa2trW1tbX19fQ0NDn5+fo6OjY2NjU1NTPz8/GxsbIyMiPBURRAAADFUlEQVQ4y+WUa3PiNhSGfb+ky7bdyHadBdYXvEkAS8aS8BXbwsYk//8PVSQTlhL6uR/6eoaRmWfeIx2/R4Lwn0qUZEVSRU3SZcn4V8q8++3L3eTr73/8+e0e3EYswzacv9yH79PZ/OGH6fnBLcoLZwvFiX4+TuZP0fzZBcvVLUqSNWkN7uPn+T1EipZI3g3KB2CTqgDDTUrodoshya5sspP8C729nP67oHKkJrYiKWpyqqokic7XqlIUKLGtM1VW9S5t2shcdq67bFu2N5lTmT1Ju80vN9W34QCHEusoKSxhrYmCp6DrjSNfpLgi2JHXa96ldVnwEyfX1LtXP+BBVUVLCPRc8BL1hhfsSQ+pVqg5r6jzitInSgtUDHGN6x4h7pX3opCVnyoqQcEpAupSUVRLMAZb8LefKDkoKKEpBqd98fZBW8gG6ZoiHYgidtjtWlCRqq7rJah2JsQDxdbFvhQ9dWoKIMZyXxENO1ipN3U9FPaFl2QkdY8pFEVxnef+Kgh8K1sH2T9DkdgJ7wTFqopOhzxVeatkWZdUtjbEnBvlom2Lefau4KRLNxWpIkKJ73veyu4B0TVC+qt0CULFYqJIMoJj3DXfj10X7fdNRSkksPrVtioyU7oEzpJTLG6rXct2bOM4dEw38pkSJUkqeAILbeALb/X+cPGf8wFWPQaYZ1SRPnS5+pgkfz+7+xK26TJmMWtZ1PGvcDh0MS/fke3HMT3z6WU6nTSLx/vZ0/Th4cfsefr1aTp9fJ1NR3Kmlgt3jBiLon3sNuE8jMOQJ5dSQAEozxSZNOO479woOsSsi47NIY5js2OM8dadKWexj8fGjWsMIcFcBGCKCaSg3J4p35lNXsImnL42jRu+ThbH/WLxEobRPKwp/hg1SxFVPhuwJHzaSj4ApO/7UidkS+gQnBsmrvRmF+3bMWbH9BBViiIrCOkyknXpMhaBYRTIRoWtocS4dSO9ybAQa+KR1WNowq0MNesWtbbUdsNvC0B243wWUfkmla8Mp2WtwxjYHd34thUPsOUHWeZlAb9PeRqF/5/+BuFqhipKMmxVAAAAAElFTkSuQmCC" alt="">
+                            </a>
+                        </div><span class="text-muted">Jan 22, 2019</span><span class="text-muted"> - </span><a href="/dataverse/mupolling">Monmouth Polling Institute Dataverse</a>
+
+                        <div class="resultDatasetCitationBlock alert alert-info bg-citation">Monmouth University Polling Institute, 2019, "Monmouth University West Virginia Poll, Number 158", <a href="https://doi.org/10.15139/S3/RXQAIY" target="_blank">https://doi.org/10.15139/S3/RXQAIY</a>, UNC Dataverse, V1, UNF:6:PQWG9yAUJun299viwf2wKg== [fileUNF]
+                        </div>This survey was conducted among West Virginia potential voters.</div></td>
+</tr>
+</tbody>
+</table>
+
+
+            <div class="results-sort-pagination results-bottom text-center">
+
+                <ul class="pagination">
+
+                    <li class="disabled"><a href="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=1">«</a>
+                    </li>
+                    <li class="disabled"><a href="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=1">&lt; Previous</a>
+                    </li>
+                        <li class="active"><a href="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=1">1
+                                <span class="sr-only">(Current)
+                                </span></a>
+                        </li>
+                        <li><a href="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=2">2
+                                <span>
+                                </span></a>
+                        </li>
+                        <li><a href="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=3">3
+                                <span>
+                                </span></a>
+                        </li>
+                        <li><a href="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=4">4
+                                <span>
+                                </span></a>
+                        </li>
+                        <li><a href="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=5">5
+                                <span>
+                                </span></a>
+                        </li>
+                    <li><a href="/dataverse/unc?q=&amp;types=datasets&amp;sort=dateSort&amp;order=desc&amp;page=2">Next &gt;</a>
+                    </li>
+                    <li><a href="/dataverse/unc?q=&amp;sort=dateSort&amp;order=desc&amp;page=2488&amp;types=datasets">»</a>
+                    </li>
+                </ul>
+            </div>
+        </div></div>
+{% endblock %}

@@ -16,8 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.urls import path
 from django.contrib import admin
+from geoverse.views import LandingIndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('statehouses/', include('geoverse.apps.statehouses.urls')),
+    path('datasets/', include('geoverse.apps.datasets.urls')),
+    path('', LandingIndexView, name='base_index')
 ]
