@@ -1,6 +1,8 @@
 # Custom Stoof
 db.sqlite3
 .DS_Store
+geoverse/apps/statehouses/data/filtered.tsv
+geoverse/apps/statehouses/static/statehouses/lobbyists-cloropleth-map.html
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
